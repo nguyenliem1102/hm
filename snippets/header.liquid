@@ -1,0 +1,160 @@
+<header id="header-content">
+
+  <div class="header">
+	
+      <div class="header-inner">
+   
+          
+          <div class=" col-md-3 col-sm-3 col-xs-12">
+            <div class="logo">
+              {% if settings.use_logo %}
+                  <h1><a href="/"><img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" /></a></h1>
+                   {% if template == 'index' %}
+                  <h1 style="display:none"><a href="/">{{ shop.name }}</a></h1>
+                {% endif %}
+                {% else %}
+                  <h1><a href="/">{{ shop.name }}</a></h1>
+              {% endif %}
+            </div>
+            <div class=" logo-sticky">
+
+              {% if settings.use_logo_sticky %}
+              <a href="/"><img src="{{ 'logo-sticky.png' | asset_url }}" alt="{{ shop.name }}" /></a>
+              {% endif %}
+
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-xs-12" id="header-top-cart">
+            <div class="header-cart">
+              <!--%include 'customer_links' %-->
+				<div class="top-currency">
+            	<span class="dropdown-icon">
+                	<i class="icon_cog"></i>
+                </span>
+              <div class="top-bar-dropdown">
+                <label> Select Currency</label>
+                {% include 'new-currency-top' %}
+                <div class="cusstom-link">
+                  {% if shop.customer_accounts_enabled %}
+                    {% if customer %}
+                    <ul class="customer-links">
+                      {% if settings.enable_wishlist %}
+                      <li class="wishlist">
+                     	 <i class="icon_heart" aria-hidden="true"></i>
+                        <a href="/pages/wish-list" title="My Wishlist">My Wishlist</a>
+                      </li>
+                      {% endif %}
+                      <li><i class="icon_check_alt" aria-hidden="true"></i><a href="/checkout"><span>Checkout</span></a></li>
+                      <li>
+                        {{ 'Logout' | customer_logout_link }}
+               
+                        <a href="/account">My Account</a>
+                      </li>
+                    </ul>
+                    {% else %}
+                    <ul class="customer-links">
+                      {% if settings.enable_wishlist %}
+                      <li class="wishlist">
+                        <i class="icon_heart" aria-hidden="true"></i>
+                        <a href="/pages/wish-list" title="My Wishlist">My Wishlist</a>
+                      </li>
+                      {% endif %}
+                      <li><i class="icon_check_alt" aria-hidden="true"></i><a href="/checkout"><span>Checkout</span></a></li>
+                      <li><i class="icon_lock-open" aria-hidden="true"></i>
+                        {{ 'Sign In' | customer_login_link }}
+                        
+                       </li>
+                      <li><i class="icon_profile" aria-hidden="true"></i>
+                        {% if shop.customer_accounts_optional %}
+                        {{ 'Create an account' | customer_register_link }}
+                        {% endif %}
+                      </li>
+                    </ul>
+                    {% endif %}
+                   {% endif %}
+                </div>
+              </div>
+            </div>
+              
+              <div class="top-cart">
+                  <p class="top-carts">
+                    <a href="/cart" id="cartToggle">
+                     <span class="icon top-icon-cart"><i class="icon-handbag icons"></i></span>
+                      <span id="cart-count">{{ cart.item_count }}</span>
+                    </a> 
+                  </p>
+                <div id="dropdown-cart"> 
+                  <div class="cart-empty">
+                    <p>You have no items in your shopping cart.</p>
+                  </div>
+                  <div class="mini_cart_header">
+                    <ol class="cart-list">  
+                      {% for item in cart.items %}
+                      <li class="item" id="cart-item-{{item.id}}">
+                        <a href="{{item.url}}" title="{{item.title}}" class="product-image"><img src="{{ item.image | product_img_url: 'small' }}" alt="{{item.title}}"></a>
+                        <div class="product-inner">
+                          
+                          <p class="product-name"><a href="{{item.url}}">{{ item.product.title }}</a></p>
+                          <div class="option">
+                            {% if item.product.variants.size != 0 %}
+                            {% unless item.variant.title contains 'Default' %}
+                            <small>{{ item.variant.title }}</small>
+                            {% endunless %}
+                            {% endif %}
+                          </div>
+                          <div class="cart-collateral"><span class="price">{{item.price | money}}</span> x {{item.quantity}}</div>
+                          <a href="javascript:void(0)" title="Remove This Item" class="btn-remove"><i class="fs1" aria-hidden="true" data-icon="M"></i></a>
+                        </div>
+                      </li>
+                      {% endfor %}
+                    </ol>
+                    <div class="summary">                
+                      <p class="total">
+                        <span class="label" style="color:#000">Total:</span>
+                        <span class="price">{{cart.total_price | money}}</span> 
+                      </p>
+                    </div>
+                    <div class="actions">
+                      <div class="view-cart"><a href="/cart">View Cart</a></div>
+                      <button class="btn" onclick="window.location='/checkout'">Checkout</button>
+                      
+                    </div>
+                    
+                  </div>
+                </div>
+                {% comment %}
+                If customer accounts are enabled, provide login and create account links
+                {% endcomment %}
+              </div> <!-- End Top Header --> 
+            </div>
+            
+             <div id="search-top" >
+              <div class="icon-search">
+                <i class="icon-magnifier icons"></i>
+              </div>
+              <div class="search-form" style="display:none">
+                <div class="search-close">
+                    <i class="icon_close"></i>
+                </div>
+              	{% include 'search-bar' %}
+              </div>
+            </div>
+             
+            <div class="top-menu" id="header-menu">
+              <div class="menu-top text-right">
+                <div class="toggle-menu">
+                  <button class="navbar-toggle btn-menu-canvas" data-toggle="offcanvas" data-target="#off-canvas-nav">
+                    <i class="icon_menu"></i>
+                  </button>
+                </div>
+                <div class="menu-action">{% include 'site-nav' %}</div>
+
+              </div>
+            
+         	 </div>
+          </div>
+      </div>   
+  </div>
+ </header>
+  
+

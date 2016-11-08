@@ -1,0 +1,14 @@
+<div class="widget widget-recent-articles">
+  <div class="widget-title">
+ 	 <h3><span>Recent Articles</span></h3>
+  </div>
+  <div class="widget-content">
+    	<ul>
+    {% for article in blog.articles limit:10 %}
+      <li class="article">
+     	 <p><a href="{{ article.url }}">{{ article.title }}</a> </p>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>

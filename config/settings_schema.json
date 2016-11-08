@@ -1,0 +1,2604 @@
+[
+  {
+    "name": "Welcome",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Theme settings allow designers to provide an easy way for any user to customize the look and feel of their shop without having to delve into HTML or CSS code. Please see our [help page on theme settings](http:\/\/docs.shopify.com\/themes\/theme-templates\/settings) to learn more about how you can make your theme customizable."
+      }
+    ]
+  },
+  {
+    "name": "Header and Logo",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Logo and icon"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_logo",
+        "label": "Use a custom logo"
+      },
+      {
+        "type": "image",
+        "id": "logo.png"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_logo_sticky",
+        "label": "logo sticky"
+      },
+      {
+        "type": "image",
+        "id": "logo-sticky.png"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_favicon",
+        "label": "Use a custom icon"
+      },
+      {
+        "type": "image",
+        "id": "favicon.png",
+        "max-width": 16,
+        "max-height": 16,
+        "label": "Favicon",
+        "info": "16 x 16px required"
+      },
+      {
+        "type": "header",
+        "content": "Search"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_header_search",
+        "label": "Show search form?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "search_placeholder",
+        "label": "placeholder text",
+        "default": "search"
+      },
+      {
+        "type": "header",
+        "content": "Social"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_conatct_header",
+        "label": "Show contact?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "social_top_1",
+        "label": "icon social 1",
+        "default": "<i class='fa fa-phone'><\/i>"
+      },
+      {
+        "type": "textarea",
+        "id": "header-contact-top-1",
+        "label": "Contact Top",
+        "default": "Contact Top"
+      },
+      {
+        "type": "text",
+        "id": "social_top_2",
+        "label": "icon social 2",
+        "default": "<i class='fa fa-envelope'><\/i>"
+      },
+      {
+        "type": "textarea",
+        "id": "header-contact-top-2",
+        "label": "Contact Top",
+        "default": "Contact Top"
+      }
+    ]
+  },
+  {
+    "name": "Newsletter",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Popup Newsletter"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_popup_newsletter",
+        "label": "Display Popup Newsletter?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "bg_newsletter.jpg",
+        "label": "Upload a new newsletter image",
+        "max-width": 2000,
+        "max-height": 2000
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_title",
+        "label": "Popup Newsletter Title"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_sub_title",
+        "label": "Popup Newsletter Sub Title"
+      },
+      {
+        "type": "text",
+        "id": "popup_newsletter_message",
+        "label": "Popup Newsletter Message"
+      },
+      {
+        "type": "header",
+        "content": "Newsletter"
+      },
+      {
+        "type": "checkbox",
+        "id": "footer_display_newsletter",
+        "label": "Show newsletter?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_backgroun_newsleter",
+        "label": "Display Background images?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "bg_newsneter.jpg",
+        "label": "Paralax background",
+        "max-width": 2500,
+        "max-height": 2500
+      },
+      {
+        "type": "text",
+        "id": "footer_newsletter_title",
+        "label": "Newsletter title",
+        "default": "Newsletter Sign Up"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_newsletter_content",
+        "label": "Newsletter Smaill",
+        "default": "Newsletter Smaill"
+      },
+      {
+        "type": "text",
+        "id": "mailing_list_form_action",
+        "label": "MailChimp form action URL",
+        "info": "[Where do I find my MailChimp form action URL?](http:\/\/docs.shopify.com\/support\/configuration\/store-customization\/where-do-i-get-my-mailchimp-form-action)"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Footer Background"
+      },
+      {
+        "type": "color",
+        "id": "bg_footer_color",
+        "label": "Background color",
+        "default": "#141414"
+      },
+      {
+        "type": "header",
+        "content": "Footer Color Line"
+      },
+      {
+        "type": "color",
+        "id": "bg_footer_line_color",
+        "label": "Footer Color Line",
+        "default": "#282828"
+      },
+      {
+        "type": "header",
+        "content": "Color Text"
+      },
+      {
+        "type": "color",
+        "id": "footer_title_color",
+        "label": "Footer Title Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "footer_link_color",
+        "label": "Footer Text Color",
+        "default": "#969696"
+      },
+      {
+        "type": "header",
+        "content": "Footer col 1"
+      },
+      {
+        "type": "image",
+        "id": "logo_footer_top.png",
+        "label": "Footer Logo",
+        "max-width": 200
+      },
+      {
+        "type": "textarea",
+        "id": "footer_top_content",
+        "label": "Footer Top Content",
+        "default": "text default"
+      },
+      {
+        "type": "header",
+        "content": "Footer Share"
+      },
+      {
+        "type": "text",
+        "id": "footer_share_1",
+        "label": "share text 1",
+        "default": "facebook"
+      },
+      {
+        "type": "text",
+        "id": "footer_link_share_1",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_share_2",
+        "label": "share text 1",
+        "default": "twitter"
+      },
+      {
+        "type": "text",
+        "id": "footer_link_share_2",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_share_3",
+        "label": "share text 3",
+        "default": "pinterest"
+      },
+      {
+        "type": "text",
+        "id": "footer_link_share_3",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_share_4",
+        "label": "share text 4",
+        "default": "google+"
+      },
+      {
+        "type": "text",
+        "id": "footer_link_share_4",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "text",
+        "id": "footer_share_5",
+        "label": "share text 5",
+        "default": "instagram"
+      },
+      {
+        "type": "text",
+        "id": "footer_link_share_5",
+        "label": "Link",
+        "default": "#"
+      },
+      {
+        "type": "header",
+        "content": "Footer Address"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_footer_address",
+        "label": "Show Footer Address?"
+      },
+      {
+        "type": "textarea",
+        "id": "footer_address_code",
+        "label": "Footer Address Code"
+      }
+    ]
+  },
+  {
+    "name": "Background",
+    "settings": [
+      {
+        "type": "radio",
+        "id": "bg_body_img",
+        "label": "Background image",
+        "options": [
+          {
+            "value": "bg-body.png",
+            "label": "Uploaded image"
+          },
+          {
+            "value": "none",
+            "label": "Solid color (no image)"
+          }
+        ]
+      },
+      {
+        "type": "color",
+        "id": "bg_body_color",
+        "label": "Background color",
+        "default": "#fff"
+      },
+      {
+        "type": "radio",
+        "id": "bg_body_position_x",
+        "label": "Horizontal position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ]
+      },
+      {
+        "type": "radio",
+        "id": "bg_body_position_y",
+        "label": "Vertical position",
+        "options": [
+          {
+            "value": "top",
+            "label": "Top"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "bottom",
+            "label": "Bottom"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "bg_body_repeat",
+        "label": "Repeat",
+        "options": [
+          {
+            "value": "repeat",
+            "label": "Horizontally and vertically"
+          },
+          {
+            "value": "repeat-x",
+            "label": "Horizontally only"
+          },
+          {
+            "value": "repeat-y",
+            "label": "Vertically only"
+          },
+          {
+            "value": "no-repeat",
+            "label": "Don't repeat"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "bg_body_attachment",
+        "label": "Attachment",
+        "options": [
+          {
+            "value": "scroll",
+            "label": "Scroll"
+          },
+          {
+            "value": "fixed",
+            "label": "Fixed"
+          }
+        ]
+      },
+      {
+        "type": "image",
+        "id": "bg-body.png",
+        "label": "Upload a new image",
+        "max-width": 2000,
+        "max-height": 2000
+      }
+    ]
+  },
+  {
+    "name": "General",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Body Font Size"
+      },
+      {
+        "type": "text",
+        "id": "body_font_size",
+        "label": "Body Font Size",
+        "default": "12",
+        "info": "Default Value: 12"
+      },
+      {
+        "type": "header",
+        "content": "Breadcrumb"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_breadcrumb",
+        "label": "Display Breadcrumb?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "breadcrumb_color",
+        "label": "Breadcrumb Color",
+        "default": "#848484",
+        "info": "Default Value: #848484"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_br_background_color",
+        "label": "Display Background Color?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "breadcrumb_background_color",
+        "label": "Breadcrumb Color",
+        "default": "#f2f2f2",
+        "info": "Default Value: #f2f2f2"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_backgound_images",
+        "label": "Display background Images?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "images-bg-breadcrum.jpg",
+        "label": "Background Breadcrumb",
+        "max-width": 3000
+      },
+      {
+        "type": "select",
+        "id": "breadcrumb_text_transform",
+        "label": "Breadcrumb Text Transform",
+        "options": [
+          {
+            "value": "uppercase",
+            "label": "Uppercase"
+          },
+          {
+            "value": "capitalize",
+            "label": "Capitalize"
+          },
+          {
+            "value": "lowercase",
+            "label": "Lowercase"
+          },
+          {
+            "value": "full-width",
+            "label": "Full-width"
+          }
+        ],
+        "default": "lowercase",
+        "info": "Default Value: Lowercase"
+      },
+      {
+        "type": "header",
+        "content": "Page Title"
+      },
+      {
+        "type": "color",
+        "id": "page_title_color",
+        "label": "Page Title Color",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "select",
+        "id": "page_title_text_align",
+        "label": "Page Title Text Align",
+        "options": [
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left",
+        "info": "Default Value: Left"
+      }
+    ]
+  },
+  {
+    "name": "Mega Menu",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Mega Menu Items"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_megamenu",
+        "label": "Display Mega Menu?",
+        "default": true
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 1"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_enable_1",
+        "label": "Enable Mega Menu item 1"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_title_1",
+        "label": "Menu item 1",
+        "info": "(*) Enter \"Link Name\" of \"Navigation \/ Main Menu\" into Menu item 1 box"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_new_1",
+        "label": "Display icon New at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_hot_1",
+        "label": "Display icon Hot at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_fullwidth_1",
+        "label": "Enable Mega Menu 1 Fullwidth"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_width_1",
+        "label": "Mega Menu width 1",
+        "info": "Used pixcel (eg: 1000px). Leave empty if selected fullwidth."
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eblocklinks_1",
+        "label": "Mega Menu blocklinks enable 1"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blocklinks_1",
+        "label": "Width: Number column of Links",
+        "default": "9",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12) "
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_1",
+        "label": " Width: Number column of block",
+        "default": "4",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_evideo_1",
+        "label": "Mega Menu video enable 1"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockvideo_1",
+        "label": "Columns of block video 1",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_cvideo_1",
+        "label": "Mega Menu video content 1",
+        "info": "Copy Video CODE from youtube, vimeo and put here"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eproduct_1",
+        "label": "Mega Menu product enable 1"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockproducts_1",
+        "label": "Columns of block product 1",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_tproduct_1",
+        "label": "Mega Menu product title 1"
+      },
+      {
+        "type": "collection",
+        "id": "menuitem_cproduct_1",
+        "label": "Mega Menu product item 1"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_nproduct_1",
+        "label": "Limit Product 1",
+        "default": "3",
+        "info": "number product(eg:1,2,3..)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_ehtml_1",
+        "label": "Mega Menu html enable 1"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockhtml_1",
+        "label": "Columns of block html 1",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_thtml_1",
+        "label": "Mega Menu html title 1"
+      },
+      {
+        "type": "image",
+        "id": "mega_images_1.jpg",
+        "label": "Mega Menu html image 1",
+        "max-width": 1200,
+        "max-height": 500,
+        "info": "Max size: 1170px x 500px"
+      },
+      {
+        "type": "paragraph",
+        "content": "Images max size: 1200px x 500px. Type: *.jpg"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_chtml_1",
+        "label": "Mega Menu html title 1"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 2"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_enable_2",
+        "label": "Enable Mega Menu item 2"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_title_2",
+        "label": "Menu item 2",
+        "info": "(*) Enter \"Link Name\" of \"Navigation \/ Main Menu\" into Menu item 2 box"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_new_2",
+        "label": "Display icon New at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_hot_2",
+        "label": "Display icon Hot at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_fullwidth_2",
+        "label": "Enable Mega Menu 2 Fullwidth"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_width_2",
+        "label": "Mega Menu width 2",
+        "info": "Used pixcel (eg: 1000px). Leave empty if selected fullwidth."
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eblocklinks_2",
+        "label": "Mega Menu blocklinks enable 2"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blocklinks_2",
+        "label": "Width: Number column of Links",
+        "default": "9",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_2",
+        "label": " Width: Number column of block",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_evideo_2",
+        "label": "Mega Menu video enable 2"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockvideo_2",
+        "label": "Columns of block video 2",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_cvideo_2",
+        "label": "Mega Menu video content 2",
+        "info": "Copy Video CODE from youtube, vimeo and put here"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eproduct_2",
+        "label": "Mega Menu product enable 2"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockproducts_2",
+        "label": "Columns of block product 2",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_tproduct_2",
+        "label": "Mega Menu product title 2"
+      },
+      {
+        "type": "collection",
+        "id": "menuitem_cproduct_2",
+        "label": "Mega Menu product item 2"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_nproduct_2",
+        "label": "Limit Product",
+        "default": "3",
+        "info": "number product(eg:1,2,3..)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_ehtml_2",
+        "label": "Mega Menu html enable 2"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockhtml_2",
+        "label": "Columns of block html 2",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_thtml_2",
+        "label": "Mega Menu html title 2"
+      },
+      {
+        "type": "image",
+        "id": "mega_images_2.jpg",
+        "label": "Mega Menu html image 2",
+        "max-width": 1200,
+        "max-height": 500,
+        "info": "Max size: 1170px x 500px"
+      },
+      {
+        "type": "paragraph",
+        "content": "Images max size: 1200px x 500px. Type: *.jpg"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_chtml_2",
+        "label": "Mega Menu html title 2"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_enable_3",
+        "label": "Enable Mega Menu item 3"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_title_3",
+        "label": "Menu item 3",
+        "info": "(*) Enter \"Link Name\" of \"Navigation \/ Main Menu\" into Menu item 3 box"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_new_3",
+        "label": "Display icon New at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_hot_3",
+        "label": "Display icon Hot at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_fullwidth_3",
+        "label": "Enable Mega Menu 3 Fullwidth"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_width_3",
+        "label": "Mega Menu width 3",
+        "info": "Used pixcel (eg: 1000px). Leave empty if selected fullwidth."
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eblocklinks_3",
+        "label": "Mega Menu blocklinks enable 3"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blocklinks_3",
+        "label": "Width: Number column of Links",
+        "default": "9",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_3",
+        "label": " Width: Number column of block",
+        "default": "4",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_evideo_3",
+        "label": "Mega Menu video enable 3"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockvideo_3",
+        "label": "Columns of block video 3",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_cvideo_3",
+        "label": "Mega Menu video content 3",
+        "info": "Copy Video CODE from youtube, vimeo and put here"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eproduct_3",
+        "label": "Mega Menu product enable 3"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockproducts_3",
+        "label": "Columns of block product 3",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_tproduct_3",
+        "label": "Mega Menu product title 3"
+      },
+      {
+        "type": "collection",
+        "id": "menuitem_cproduct_3",
+        "label": "Mega Menu product item 3"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_nproduct_3",
+        "label": "Limit Product",
+        "default": "3",
+        "info": "number product(eg:1,2,3..)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_ehtml_3",
+        "label": "Mega Menu html enable 3"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockhtml_3",
+        "label": "Columns of block html 3",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_thtml_3",
+        "label": "Mega Menu html title 3"
+      },
+      {
+        "type": "image",
+        "id": "mega_images_3.jpg",
+        "label": "Mega Menu html image 3",
+        "max-width": 1200,
+        "max-height": 500,
+        "info": "Max size: 1170px x 500px"
+      },
+      {
+        "type": "paragraph",
+        "content": "Images max size: 1200px x 500px. Type: *.jpg"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_chtml_3",
+        "label": "Mega Menu html title 3"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 4"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_enable_4",
+        "label": "Enable Mega Menu item 4"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_title_4",
+        "label": "Menu item 4",
+        "info": "(*) Enter \"Link Name\" of \"Navigation \/ Main Menu\" into Menu item 4 box"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_new_4",
+        "label": "Display icon New at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_hot_4",
+        "label": "Display icon Hot at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_fullwidth_4",
+        "label": "Enable Mega Menu 4 Fullwidth"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_width_4",
+        "label": "Mega Menu width 4",
+        "info": "Used pixcel (eg: 1000px). Leave empty if selected fullwidth."
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eblocklinks_4",
+        "label": "Mega Menu blocklinks enable 4"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blocklinks_4",
+        "label": "Width: Number column of Links",
+        "default": "9",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_4",
+        "label": " Width: Number column of block",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_evideo_4",
+        "label": "Mega Menu video enable 4"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockvideo_4",
+        "label": "Columns of block video 4",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_cvideo_4",
+        "label": "Mega Menu video content 4",
+        "info": "Copy Video CODE from youtube, vimeo and put here"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eproduct_4",
+        "label": "Mega Menu product enable 4"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockproducts_4",
+        "label": "Columns of block product 4",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_tproduct_4",
+        "label": "Mega Menu product title 4"
+      },
+      {
+        "type": "collection",
+        "id": "menuitem_cproduct_4",
+        "label": "Mega Menu product item 4"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_nproduct_4",
+        "label": "Limit Product",
+        "default": "3",
+        "info": "number product(eg:1,2,3..)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_ehtml_4",
+        "label": "Mega Menu html enable 4"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockhtml_4",
+        "label": "Columns of block html 4",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_thtml_4",
+        "label": "Mega Menu html title 4"
+      },
+      {
+        "type": "image",
+        "id": "mega_images_4.jpg",
+        "label": "Mega Menu html image 4",
+        "max-width": 1200,
+        "max-height": 500,
+        "info": "Max size: 1170px x 500px"
+      },
+      {
+        "type": "paragraph",
+        "content": "Images max size: 1200px x 500px. Type: *.jpg"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_chtml_4",
+        "label": "Mega Menu html title 4"
+      },
+      {
+        "type": "header",
+        "content": "Mega Menu Item 5"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_enable_5",
+        "label": "Enable Mega Menu item 5"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_title_5",
+        "label": "Menu item 5",
+        "info": "(*) Enter \"Link Name\" of \"Navigation \/ Main Menu\" into Menu item 5 box"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_new_5",
+        "label": "Display icon New at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_hot_5",
+        "label": "Display icon Hot at Mega Menu Items?",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_fullwidth_5",
+        "label": "Enable Mega Menu 5 Fullwidth"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_width_5",
+        "label": "Mega Menu width 5",
+        "info": "Used pixcel (eg: 1000px). Leave empty if selected fullwidth."
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eblocklinks_5",
+        "label": "Mega Menu blocklinks enable 5"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blocklinks_5",
+        "label": "Width: Number column of Links",
+        "default": "9",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_5",
+        "label": " Width: Number column of block",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_evideo_5",
+        "label": "Mega Menu video enable 5"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockvideo_5",
+        "label": "Columns of block video 5",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_cvideo_5",
+        "label": "Mega Menu video content 5",
+        "info": "Copy Video CODE from youtube, vimeo and put here"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_eproduct_5",
+        "label": "Mega Menu product enable 5"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockproducts_5",
+        "label": "Columns of block product 5",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_tproduct_5",
+        "label": "Mega Menu product title 5"
+      },
+      {
+        "type": "collection",
+        "id": "menuitem_cproduct_5",
+        "label": "Mega Menu product item 5"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_nproduct_5",
+        "label": "Limit Product",
+        "default": "3",
+        "info": "number product(eg:1,2,3..)"
+      },
+      {
+        "type": "checkbox",
+        "id": "menuitem_ehtml_5",
+        "label": "Mega Menu html enable 5"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_columns_blockhtml_5",
+        "label": "Columns of block html 5",
+        "default": "3",
+        "info": "Number of columns in a row (eg: 1..12, max-column:12)"
+      },
+      {
+        "type": "text",
+        "id": "menuitem_thtml_5",
+        "label": "Mega Menu html title 5"
+      },
+      {
+        "type": "image",
+        "id": "mega_images_5.jpg",
+        "label": "Mega Menu html image 5",
+        "max-width": 1200,
+        "max-height": 500,
+        "info": "Max size: 1170px x 500px"
+      },
+      {
+        "type": "paragraph",
+        "content": "Images max size: 1200px x 500px. Type: *.jpg"
+      },
+      {
+        "type": "textarea",
+        "id": "menuitem_chtml_5",
+        "label": "Mega Menu html title 5"
+      }
+    ]
+  },
+  {
+    "name": "Menu Top",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Ticky Menu"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_ticky_menu",
+        "label": "Display Ticky Menu?",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Button",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary Button"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_bg_color",
+        "label": "Primary Button Background Color",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_border_color",
+        "label": "Primary Button Border Color",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_text_color",
+        "label": "Primary Button Text Color",
+        "default": "#fff",
+        "info": "Default Value: #fff"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_bg_color_hover",
+        "label": "Primary Button Background Color Hover",
+        "default": "#fff",
+        "info": "Default Value: #fff"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_border_color_hover",
+        "label": "Primary Button Border Color Hover",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "color",
+        "id": "primary_button_text_color_hover",
+        "label": "Primary Button Text Color Hover",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "header",
+        "content": "Secondary Button"
+      },
+      {
+        "type": "color",
+        "id": "second_button_bg_color",
+        "label": "Second Button Background Color",
+        "default": "#fff",
+        "info": "Default Value: #fff"
+      },
+      {
+        "type": "color",
+        "id": "second_button_border_color",
+        "label": "Second Button Border Color",
+        "default": "#7d7d7d",
+        "info": "Default Value: #7d7d7d"
+      },
+      {
+        "type": "color",
+        "id": "second_button_text_color",
+        "label": "Second Button Text Color",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "color",
+        "id": "second_button_bg_color_hover",
+        "label": "Second Button Background Color Hover",
+        "default": "#e95144",
+        "info": "Default Value: #e95144"
+      },
+      {
+        "type": "color",
+        "id": "second_button_border_color_hover",
+        "label": "Second Button Border Color Hover",
+        "default": "#e95144",
+        "info": "Default Value: #e95144"
+      },
+      {
+        "type": "color",
+        "id": "second_button_text_color_hover",
+        "label": "Second Button Text Color",
+        "default": "#fff",
+        "info": "Default Value: #fff"
+      }
+    ]
+  },
+  {
+    "name": "Home Product",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Homepage Tabs"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tabs",
+        "label": "Enable Tabs ?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "tabs_title_block",
+        "label": "Title Block",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "tabs_sub_title_top",
+        "label": "Sub Title Block",
+        "default": "Sub Title"
+      },
+      {
+        "type": "text",
+        "id": "home_mostview_limit",
+        "label": "Limit",
+        "default": "4"
+      },
+      {
+        "type": "text",
+        "id": "home_mostview_itempage",
+        "label": "Row",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "home_mostview_columntab",
+        "label": "Columns",
+        "default": "1",
+        "info": "Sample: 1, 2, 3, 4, 6, 12"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tabnew",
+        "label": "Tabs products 1",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "items_tab_1",
+        "label": "Lable Tabs 1",
+        "default": "Items 1"
+      },
+      {
+        "type": "collection",
+        "id": "tabnew_collection",
+        "label": "Collection to products from"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tabfeatured",
+        "label": "Tabs products 2?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "items_tab_2",
+        "label": "Lable Tabs 2",
+        "default": "Items 2"
+      },
+      {
+        "type": "collection",
+        "id": "tabfeatured_collection",
+        "label": "Collection to products from"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_tabsale",
+        "label": "Tabs products 3",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "items_tab_3",
+        "label": "Lable Tabs 3",
+        "default": "Items 3"
+      },
+      {
+        "type": "collection",
+        "id": "tabsale_collection",
+        "label": "Collection to products from"
+      }
+    ]
+  },
+  {
+    "name": "Home Block",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Block Top"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_block_static",
+        "label": "Enable Block Top On Home Page?"
+      },
+      {
+        "type": "text",
+        "id": "block_top_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "block_top_title_bg",
+        "label": "Text Background ",
+        "default": "W"
+      },
+      {
+        "type": "text",
+        "id": "block_top_sub_title",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+      {
+        "type": "text",
+        "id": "block_top_icon_1",
+        "label": "Icon 1",
+        "default": "icon_tag_alt"
+      },
+      {
+        "type": "textarea",
+        "id": "block_top_content_1",
+        "label": "block content 1"
+      },
+      {
+        "type": "image",
+        "id": "block_top_slide8.jpg",
+        "label": "Block Images",
+        "max-width": 3000
+      },
+      {
+        "type": "text",
+        "id": "block_top_icon_2",
+        "label": "Icon 2",
+        "default": "icon_currency"
+      },
+      {
+        "type": "textarea",
+        "id": "block_top_content_2",
+        "label": "block content 2"
+      },
+      {
+        "type": "image",
+        "id": "block_top_slide7.jpg",
+        "label": "Block Images",
+        "max-width": 3000
+      },
+      {
+        "type": "text",
+        "id": "block_top_icon_3",
+        "label": "Icon 3",
+        "default": "icon_comment_alt"
+      },
+      {
+        "type": "textarea",
+        "id": "block_top_content_3",
+        "label": "block content 2"
+      },
+      {
+        "type": "image",
+        "id": "block_top_slide6.jpg",
+        "label": "Block Images",
+        "max-width": 3000
+      },
+      {
+        "type": "header",
+        "content": "Block Custom"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_block_carousel",
+        "label": "Enable blockCustom on Home Page?"
+      },
+      {
+        "type": "image",
+        "id": "block_slide1.jpg",
+        "label": "Background Block",
+        "max-width": 1000
+      },
+      {
+        "type": "textarea",
+        "id": "block_slide_content_2",
+        "label": "Block Content ",
+        "default": "Text Default"
+      },
+      {
+        "type": "text",
+        "id": "block_custom_time",
+        "label": "Time",
+        "default": "2015\/12\/30",
+        "info": "format time year\/month\/day"
+      },
+      {
+        "type": "text",
+        "id": "block_custom_button2",
+        "label": "Button",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "block_custom_button_link2",
+        "label": "Button Link",
+        "default": "#"
+      },
+      {
+        "type": "image",
+        "id": "block_slide2.png",
+        "label": "Block Images",
+        "max-width": 1000
+      },
+      {
+        "type": "header",
+        "content": "Our brands"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_ourbrands",
+        "label": "Enable our brands on Home Page?"
+      },
+      {
+        "type": "text",
+        "id": "brand-footer_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "brand-footer_sub_title",
+        "label": "Sub Title",
+        "default": "Sub Title"
+      },
+      {
+        "type": "image",
+        "id": "brand_thumb1.png",
+        "label": "Logo 1",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "image",
+        "id": "brand_thumb2.png",
+        "label": "Logo 2",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "image",
+        "id": "brand_thumb3.png",
+        "label": "Logo 3",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "image",
+        "id": "brand_thumb4.png",
+        "label": "Logo 4",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "image",
+        "id": "brand_thumb5.png",
+        "label": "Logo 5",
+        "max-width": 1000,
+        "max-height": 563
+      },
+      {
+        "type": "header",
+        "content": "Blog Home"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_blog_home",
+        "label": "Enable Blog?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "blog_title",
+        "label": "Title",
+        "default": "Title"
+      },
+      {
+        "type": "text",
+        "id": "blog_sub_title",
+        "label": "Sub Title",
+        "default": " Sub Title"
+      },
+      {
+        "type": "select",
+        "id": "home_blogs_imagesize",
+        "label": "Blog Image Size",
+        "options": [
+          {
+            "value": "pico",
+            "label": "Pico (16x16 pixels)"
+          },
+          {
+            "value": "icon",
+            "label": "Icon (32x32 pixels)"
+          },
+          {
+            "value": "thumb",
+            "label": "Thumb (50x50 pixels)"
+          },
+          {
+            "value": "small",
+            "label": "Small (100x100 pixels)"
+          },
+          {
+            "value": "compact",
+            "label": "Compact (160x160 pixels)"
+          },
+          {
+            "value": "medium",
+            "label": "Medium (240x240 pixels)"
+          },
+          {
+            "value": "large",
+            "label": "Large (480x480 pixels)"
+          },
+          {
+            "value": "grande",
+            "label": "Grande (600x600 pixels)"
+          },
+          {
+            "value": "1024x1024",
+            "label": "1024x1024 (1024x1024 pixels)"
+          },
+          {
+            "value": "2048x2048",
+            "label": "2048x2048 (2048x2048 pixels)"
+          },
+          {
+            "value": "master",
+            "label": "Largest (2048x2048 pixels)"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "id": "blog_limit",
+        "label": "Limit",
+        "default": "3"
+      }
+    ]
+  },
+  {
+    "name": "Home — Slideshow",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "IMPORTANT: For best results, upload images that are at least 1180px wide. Try to keep your slideshow images the same size."
+      },
+      {
+        "type": "checkbox",
+        "id": "display_slideshow",
+        "label": "Enable slideshow?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_slideshow_1",
+        "label": "Display Slideshow Image 1?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slideshow_1.jpg",
+        "label": "Slideshow Image 1",
+        "max-width": 2048
+      },
+      {
+        "type": "textarea",
+        "id": "slide-text_1",
+        "label": "Text for Image 1",
+        "default": "Text default"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_slideshow_2",
+        "label": "Display Slideshow Image 2?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slideshow_2.jpg",
+        "label": "Slideshow Image 2",
+        "max-width": 2048
+      },
+      {
+        "type": "textarea",
+        "id": "slide-text_2",
+        "label": "Text for Image 2",
+        "default": "Text default"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_slideshow_3",
+        "label": "Display Slideshow Image 3?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slideshow_3.jpg",
+        "label": "Slideshow Image 3",
+        "max-width": 2048
+      },
+      {
+        "type": "textarea",
+        "id": "slide-text_3",
+        "label": "Text for Image 3",
+        "default": "Text default"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_slideshow_4",
+        "label": "Display Slideshow Image 4?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "slideshow_4.jpg",
+        "label": "Slideshow Image 4",
+        "max-width": 2048
+      },
+      {
+        "type": "textarea",
+        "id": "slide-text_4",
+        "label": "Text for Image 4",
+        "default": "Text default"
+      }
+    ]
+  },
+  {
+    "name": "Col Left",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Categories"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_sidebar_categories",
+        "label": "Enable at Category Page",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_sidebar_categories_detail",
+        "label": "Enable at Detail Page",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "sidebar_categories_title",
+        "label": "Categories Block Title",
+        "default": "Categories"
+      },
+      {
+        "type": "radio",
+        "id": "style_categories",
+        "label": "Show all \/ Only a few categories",
+        "options": [
+          {
+            "value": "style_show_all",
+            "label": "Show all"
+          },
+          {
+            "value": "style_little",
+            "label": "Only a few categories"
+          }
+        ]
+      },
+      {
+        "type": "textarea",
+        "id": "categories_items",
+        "label": "List of categories",
+        "info": "Use \",\" to separate categories items if you have multiple categories. For ex: Shop, Collections"
+      },
+      {
+        "type": "header",
+        "content": "Multiple choices"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sidebar_multiple_choice",
+        "label": "Enable",
+        "default": true,
+        "info": "User can select multiple colors (size, brand...) or only one color (size, brand...)?"
+      },
+      {
+        "type": "header",
+        "content": "Shop by Color"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_1",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_1_title",
+        "label": "Shop by tags 1 title",
+        "default": "Shop By Color",
+        "info": "i.e \"Shop by Color\"."
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_1",
+        "label": "Shop by color text 1",
+        "default": "Beige",
+        "info": "i.e \"Red\"."
+      },
+      {
+        "type": "image",
+        "id": "color-1.png",
+        "label": "Shop by color image 1",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_2",
+        "label": "Shop by color text 2",
+        "default": "Red"
+      },
+      {
+        "type": "image",
+        "id": "color-2.png",
+        "label": "Shop by color image 2",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_3",
+        "label": "Shop by color text 3",
+        "default": "White"
+      },
+      {
+        "type": "image",
+        "id": "color-3.png",
+        "label": "Shop by color image 3",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_4",
+        "label": "Shop by color text 4",
+        "default": "Pink"
+      },
+      {
+        "type": "image",
+        "id": "color-4.png",
+        "label": "Shop by color image 4",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_5",
+        "label": "Shop by color text 5",
+        "default": "Silver"
+      },
+      {
+        "type": "image",
+        "id": "color-5.png",
+        "label": "Shop by color image 5",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_6",
+        "label": "Shop by color text 6",
+        "default": "Blue"
+      },
+      {
+        "type": "image",
+        "id": "color-6.png",
+        "label": "Shop by color image 6",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_7",
+        "label": "Shop by color text 7",
+        "default": "Gray"
+      },
+      {
+        "type": "image",
+        "id": "color-7.png",
+        "label": "Shop by color image 7",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_8",
+        "label": "Shop by color text 8",
+        "default": "Black"
+      },
+      {
+        "type": "image",
+        "id": "color-8.png",
+        "label": "Shop by color image 8",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_9",
+        "label": "Shop by color text 9",
+        "default": "Green"
+      },
+      {
+        "type": "image",
+        "id": "color-9.png",
+        "label": "Shop by color image 9",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_10",
+        "label": "Shop by color text 10"
+      },
+      {
+        "type": "image",
+        "id": "color-10.png",
+        "label": "Shop by color image 10",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "header",
+        "content": "Shop by Size"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_2",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_2_title",
+        "label": "Shop by tags 2 title",
+        "default": "Shop By Size",
+        "info": "i.e \"Shop by Size\"."
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_2_list_tags",
+        "label": "Shop by tags 2 list",
+        "default": "S, M, L, XL, 2X, 3X",
+        "info": "Separate by a comma, i.e \"XS, S, M, L, XL\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Price"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_3",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_3_title",
+        "label": "Shop by tags 3 title",
+        "info": "i.e \"Shop by Price\"."
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_3_list_tags",
+        "label": "Shop by tags 3 list",
+        "info": "Separate by a comma, i.e \"$100 - $300, $300 - $500\"."
+      },
+      {
+        "type": "header",
+        "content": "Shop by Brand"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_shop_by_tags_4",
+        "label": "Enable",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_4_title",
+        "label": "Shop by tags 4 title",
+        "info": "i.e \"Shop by Brand\"."
+      },
+      {
+        "type": "text",
+        "id": "shop_by_tags_4_list_tags",
+        "label": "Shop by tags 4 list",
+        "info": "Separate by a comma, i.e \"Dior, Chanel...\"."
+      }
+    ]
+  },
+  {
+    "name": "Wishlist",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_wishlist",
+        "label": "Enable wishlist",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Product Collection",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_image_cat",
+        "label": "Display Image Category?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "image_category.jpg",
+        "label": "Image Category"
+      },
+      {
+        "type": "text",
+        "id": "collection_results_per_page",
+        "label": "Products per page",
+        "default": "10"
+      },
+      {
+        "type": "select",
+        "id": "collection_results_per_row",
+        "label": "Products per row",
+        "options": [
+          {
+            "value": "3",
+            "label": "3"
+          },
+          {
+            "value": "4",
+            "label": "4"
+          },
+          {
+            "value": "5",
+            "label": "5"
+          }
+        ]
+      },
+      {
+        "type": "header",
+        "content": "Product Image"
+      },
+      {
+        "type": "radio",
+        "id": "product_style_images",
+        "label": "Images Product Styles",
+        "options": [
+          {
+            "value": "hover",
+            "label": "Hover Images"
+          },
+          {
+            "value": "click",
+            "label": "Click List swatch"
+          }
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "product_image_resize",
+        "label": "Resize image?",
+        "info": "If your images don't have the same size, pleases turn on resize image to have better look."
+      },
+      {
+        "type": "checkbox",
+        "id": "product_image_crop",
+        "label": "Crop image?"
+      },
+      {
+        "type": "text",
+        "id": "product_image_ratio_width",
+        "label": "Average ratio of product image (Width:Height)",
+        "default": "1"
+      },
+      {
+        "type": "text",
+        "id": "product_image_ratio_height",
+        "label": ":",
+        "default": "1.35"
+      },
+      {
+        "type": "paragraph",
+        "content": "i.e: 1:2, 1:1.5 or 3:4"
+      }
+    ]
+  },
+  {
+    "name": "Product Detail",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_product_image_zoom",
+        "label": "Enable image zoom feature?"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_prev_next_product",
+        "label": "Display Prev\/Next Product?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_availability",
+        "label": "Display Availability?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "use_color_swatch",
+        "label": "Use Color Swatch?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_product_detail_description",
+        "label": "Display Product Description?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "product_description_title",
+        "label": "Product Description Title",
+        "default": "Product Description"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_product_reviews",
+        "label": "Display Product Reviews?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "product_review_title",
+        "label": "Product Reviews Title",
+        "default": "Customer Reviews"
+      },
+      {
+        "type": "header",
+        "content": "Related Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_related_products",
+        "label": "Display Related Products?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "related_products_title",
+        "label": "Title of related products block",
+        "default": "Related Products"
+      },
+      {
+        "type": "text",
+        "id": "number_of_related_products",
+        "label": "Number of related products",
+        "default": "8"
+      },
+      {
+        "type": "radio",
+        "id": "related_products_type",
+        "label": "Type of related products",
+        "options": [
+          {
+            "value": "tags",
+            "label": "By Tags"
+          },
+          {
+            "value": "collection",
+            "label": "By Collection"
+          }
+        ],
+        "default": "collection"
+      },
+      {
+        "type": "header",
+        "content": "Recently Viewed Products"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_recently_viewed_products",
+        "label": "Display Recently Viewed Products?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "recently_viewed_products_title",
+        "label": "Title of recently viewed products",
+        "default": "Recently Viewed Products"
+      },
+      {
+        "type": "text",
+        "id": "number_of_recently_viewed_products",
+        "label": "Number of recently viewed products",
+        "default": "8"
+      }
+    ]
+  },
+  {
+    "name": "Currency",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "enable_multiple_currencies",
+        "label": "Allow shopper to see prices in his own currency?"
+      },
+      {
+        "type": "text",
+        "id": "currency_1_unit",
+        "label": "Currency 1 unit Text",
+        "default": "AUD"
+      },
+      {
+        "type": "image",
+        "id": "currency-1.png",
+        "label": "Currency 1 unit Icon",
+        "max-width": 16,
+        "max-height": 11,
+        "info": "16px x 11px .png"
+      },
+      {
+        "type": "text",
+        "id": "currency_2_unit",
+        "label": "Currency 2 unit Text",
+        "default": "EUR"
+      },
+      {
+        "type": "image",
+        "id": "currency-2.png",
+        "label": "Currency 2 unit Icon",
+        "max-width": 16,
+        "max-height": 11,
+        "info": "16px x 11px .png"
+      },
+      {
+        "type": "text",
+        "id": "currency_3_unit",
+        "label": "Currency 3 unit Text",
+        "default": "GBP"
+      },
+      {
+        "type": "image",
+        "id": "currency-3.png",
+        "label": "Currency 3 unit Icon",
+        "max-width": 16,
+        "max-height": 11,
+        "info": "16px x 11px .png"
+      },
+      {
+        "type": "text",
+        "id": "currency_4_unit",
+        "label": "Currency 4 unit Text",
+        "default": "USD"
+      },
+      {
+        "type": "image",
+        "id": "currency-4.png",
+        "label": "Currency 4 unit Icon",
+        "max-width": 16,
+        "max-height": 11,
+        "info": "16px x 11px .png"
+      }
+    ]
+  },
+  {
+    "name": "Cart",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "cart_notes",
+        "label": "Allow customers to add notes to their order?",
+        "default": true,
+        "info": "Only enabled in the ajax cart if you use your cart.liquid markup. See docs below."
+      },
+      {
+        "type": "checkbox",
+        "id": "ajax_cart",
+        "label": "Enable Ajax Cart",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Contact Page",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Contact Block"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_contact_block",
+        "label": "Display Contact Block?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_contact_breadcrum_bg_color",
+        "label": "Display Background Color?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "breadcrumb_contact_background_color",
+        "label": "Background Contact Breadcrumb Color",
+        "default": "#f2f2f2",
+        "info": "Default Value: #f2f2f2"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_contact_breadcrum_bg_images",
+        "label": "Display Breadcrumb Bg Images?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "images-contact-bg-breadcrum.jpg",
+        "label": "Background Breadcrumb",
+        "max-width": 3000
+      },
+      {
+        "type": "text",
+        "id": "contact_icon_1",
+        "label": "icon 1",
+        "default": "<i class='icon_mobile'><\/i>"
+      },
+      {
+        "type": "textarea",
+        "id": "contact_content_1",
+        "label": "Contact content 1"
+      },
+      {
+        "type": "text",
+        "id": "contact_icon_2",
+        "label": "icon 2",
+        "default": "<i class='icon_pin_alt'><\/i>"
+      },
+      {
+        "type": "textarea",
+        "id": "contact_content_2",
+        "label": "Contact content 2"
+      },
+      {
+        "type": "text",
+        "id": "contact_icon_3",
+        "label": "icon 3",
+        "default": "<i class='icon_mail_alt'><\/i>"
+      },
+      {
+        "type": "textarea",
+        "id": "contact_content_3",
+        "label": "Contact content 3"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_google_map",
+        "label": "Display Google Map?",
+        "default": true
+      },
+      {
+        "type": "textarea",
+        "id": "google_map_code",
+        "label": "Google Map Code"
+      },
+      {
+        "type": "header",
+        "content": "Contact Form"
+      },
+      {
+        "type": "text",
+        "id": "contact_title",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "contact_your_name",
+        "label": "Placeholder text in Your Name"
+      },
+      {
+        "type": "text",
+        "id": "contact_phone_number",
+        "label": "Placeholder text in Your Phone"
+      },
+      {
+        "type": "text",
+        "id": "contact_your_email",
+        "label": "Placeholder text in Your Email"
+      },
+      {
+        "type": "text",
+        "id": "contact_your_comment",
+        "label": "Placeholder text in Your Comment"
+      }
+    ]
+  },
+  {
+    "name": "About us",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_about_us_images",
+        "label": "Display Images?",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_about_breadcrum_bg_color",
+        "label": "Display Background Color?",
+        "default": true
+      },
+      {
+        "type": "color",
+        "id": "breadcrumb_about_background_color",
+        "label": "Background About Breadcrumb Color",
+        "default": "#f2f2f2",
+        "info": "Default Value: #f2f2f2"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_about_breadcrum_bg_images",
+        "label": "Display Breadcrumb Bg Images?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "images-about-bg-breadcrum.jpg",
+        "label": "Background Breadcrumb",
+        "max-width": 3000
+      },
+      {
+        "type": "image",
+        "id": "images-aboutus-top.jpg",
+        "label": "Image About Us Top",
+        "max-width": 3000
+      }
+    ]
+  },
+  {
+    "name": "Loadding",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "display_loadding_page",
+        "label": "Display Loadding Page?",
+        "default": true
+      },
+      {
+        "type": "image",
+        "id": "loadding-page.gif",
+        "label": "Image",
+        "info": "format images .gif"
+      }
+    ]
+  },
+  {
+    "name": "Fonts",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Font 1"
+      },
+      {
+        "type": "paragraph",
+        "content": "used for Level Top Menu, Header Top, Page Title, Block Title, Button Text"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_1",
+        "label": "Fonts Name 1",
+        "default": "Montserrat"
+      },
+      {
+        "type": "header",
+        "content": "Font 2"
+      },
+      {
+        "type": "paragraph",
+        "content": "used for Body Text"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_2",
+        "label": "Fonts Name 2",
+        "default": "Roboto"
+      },
+      {
+        "type": "header",
+        "content": "Font 3"
+      },
+      {
+        "type": "paragraph",
+        "content": "used for Quickview button"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_3",
+        "label": "Fonts Name 3",
+        "default": "Roboto Condensed"
+      },
+      {
+        "type": "header",
+        "content": "Font 4"
+      },
+      {
+        "type": "paragraph",
+        "content": "used for Tag Link"
+      },
+      {
+        "type": "text",
+        "id": "fonts_name_4",
+        "label": "Fonts Name 4",
+        "default": "Georgia"
+      }
+    ]
+  }
+]

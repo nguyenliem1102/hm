@@ -1,0 +1,37 @@
+{% if settings.show_conatct_header %}	
+<div class="social">
+  <ul>
+    <li>
+      {% if settings.social_top_1 != blank %}
+    	<span>
+      		{{ settings.social_top_1 }}
+      	</span>
+      {% endif %}
+   
+    
+      {% if settings.header-contact-top-1 != blank %}
+    	<span>
+      		 {{ settings.header-contact-top-1 }}
+      	</span>
+      {% endif %}
+    </li>
+   
+     <li>
+      {% if settings.social_top_2 != blank %}
+    	<span>
+      		{{ settings.social_top_2 }}
+      	</span>
+      {% endif %}
+   
+    
+      {% if settings.header-contact-top-2 != blank %}
+    	<span>
+      		 {{ settings.header-contact-top-2 }}
+      	</span>
+      {% endif %}
+    </li>
+  </ul>
+  
+</div>
+
+{% endif %}

@@ -1,0 +1,64 @@
+
+
+{% if settings.collection_results_per_page != blank %}
+  {% assign product_per_page = settings.collection_results_per_page %}
+{% else %}
+  {% assign product_per_page = 8 %}
+{% endif %}
+{% assign columns_product = settings.collection_results_per_row | plus: 0 %}
+<div class="row">
+  
+  <div class=" col-md-9 col-sm-9 col-xs-12 col-main">    
+    {% paginate collection.products by product_per_page %}
+    <header class="page-header">
+      <div class="images">
+      {% if settings.display_image_cat %}
+        {{ 'image_category.jpg' | asset_url | img_tag }}
+      {% endif %}
+      </div>
+      {% if collection.description != ''  %}
+      <div class="rte">
+        {{ collection.description }}
+      </div>
+      {% endif %}
+    </header>
+
+    {% comment %}
+      Use .grid--rev so that the collection tags appear below the products on mobile
+    {% endcomment %}
+    
+    {% include 'toolbar' %}
+    
+    {% comment %}
+      Use class grid-uniform to have evenly sized columns clear
+      each other properly at each breakpoint.
+    {% endcomment %}
+    
+    <div class="products-grid">
+       {% assign product_grid = 12 | divided_by: settings.collection_results_per_row %}
+     
+      
+       {% assign colProduct = 12 | divided_by:columns_product %}
+      <div class="row">
+        {% if collection.products.size > 0 %}      
+        {% paginate collection.products by product_per_page %}  
+        {% for product in collection.products %}
+        {% include 'product-grid-item-category' %}
+        {% endfor %}
+        {% endpaginate %}
+        {% else %}
+        <p style="text-align: center;">There are no products in this collection.</p>
+        {% endif %}
+      </div>
+    </div>
+    
+    {% if paginate.pages > 1 %}
+    <div class="padding">
+      {% include 'pagination-page' %}
+    </div>
+    {% endif %}
+    
+    {% endpaginate %}    
+  </div>
+  {% include 'collection-sidebar' %}
+</div>

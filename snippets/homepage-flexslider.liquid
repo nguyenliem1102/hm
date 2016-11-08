@@ -1,0 +1,53 @@
+{% if template == "index" and settings.display_slideshow %}
+<section class="main-slideshow">
+
+    <div class="flexslider">
+      <ul class="slides">
+
+        {% for i in (1..4) %}
+        {% capture display_slideshow %}display_slideshow_{{ i }}{% endcapture %}
+        {% capture slide %}slideshow_{{ i }}.jpg{% endcapture %}
+        {% capture link %}image_{{ i }}_link{% endcapture %}
+        {% capture alt %}image_{{ i }}_alt{% endcapture %}
+
+        {% capture slidetext %}slide-text_{{ i }}{% endcapture %}
+        {% capture buttontext %}button-text_{{ i }}{% endcapture %}
+        {% if settings[display_slideshow] %}
+        <li class="slide">
+          <img src="{{ slide | asset_url }}" data-url="{{ settings[link] }}" class="slide-img" alt="{{ settings[alt] }}" />
+          
+          <div class="slide-des">
+            <div class="container ">
+            {% if settings[slidetext] != blank %}
+            <div class="slide-text"  >
+              {{ settings[slidetext]}}
+            </div>
+            {% endif %}
+          </div>
+          </div>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div><!-- /.flexslider -->
+
+</section> <!-- /#slideshow.row -->
+<script>
+  if ( jQuery('.slides li').size() > 1 ) {
+
+    jQuery('.flexslider').flexslider({
+      animation: "slide",
+      slideshow: true,
+      animationDuration: 700,
+      slideshowSpeed: 6000,
+      animation: "fade",
+      controlsContainer: ".flex-controls",
+      controlNav: true,
+      prevText: '<span class="arrow_carrot-left"></span>',
+	  nextText: '<span class="arrow_carrot-right"></span>',
+      keyboardNav: true
+    }).hover(function(){ $('.flex-direction-nav').fadeIn();}, function(){$('.flex-direction-nav').fadeOut();});
+
+  }
+</script>
+{% endif %}

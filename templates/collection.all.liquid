@@ -1,0 +1,52 @@
+
+
+<div class="row">
+  {% include 'collection-sidebar' %}
+  <div class=" col-md-9 col-sm-9 col-xs-12 col-main">    
+    {% paginate collection.products by 50 %}
+    <header class="page-header">
+      <div class="images">
+      {% if settings.display_image_cat %}
+        {{ 'image_category.jpg' | asset_url | img_tag }}
+      {% endif %}
+      </div>
+      {% if collection.description != ''  %}
+      <div class="rte">
+        {{ collection.description }}
+      </div>
+      {% endif %}
+    </header>
+
+    {% comment %}
+      Use .grid--rev so that the collection tags appear below the products on mobile
+    {% endcomment %}
+    
+    {% include 'toolbar' %}
+    
+    {% comment %}
+      Use class grid-uniform to have evenly sized columns clear
+      each other properly at each breakpoint.
+    {% endcomment %}
+    
+    <div class="products-grid">
+      {% if collection.products.size > 0 %}      
+      {% paginate collection.products by 50 %}  
+      {% for product in collection.products %}
+      {% include 'product-grid-item-category' %}
+      {% endfor %}
+      {% endpaginate %}
+      {% else %}
+      <p style="text-align: center;">There are no products in this collection.</p>
+      {% endif %}
+    </div>
+    
+    {% if paginate.pages > 1 %}
+    <div class="padding">
+      {% include 'pagination-page' %}
+    </div>
+    {% endif %}
+    
+    {% endpaginate %}    
+  </div>
+</div>
+

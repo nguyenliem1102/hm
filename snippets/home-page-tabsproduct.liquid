@@ -1,0 +1,86 @@
+{% if settings.enable_tabs %}
+
+{% if settings.tabs_title_block != blank %}
+
+<div class="block-title"><h2>{{ settings.tabs_title_block }}</h2></div>
+{% endif %}
+{% if settings.tabs_sub_title_top != blank %}
+	<div class="sub-title">{{ settings.tabs_sub_title_top }}</div>
+{% endif %}
+<div class="tabs-product">
+
+  <ul class="nav nav-tabs" role="tablist">
+    {% if settings.enable_tabnew and settings.tabnew_collection != blank %}
+      <li role="presentation" class="active"><a href="#tabnew_collection" aria-controls="home" role="tab" data-toggle="tab">{{ settings.items_tab_1 }}</a></li>
+    {% endif %}
+    {% if settings.enable_tabfeatured and settings.tabfeatured_collection != blank %}
+      <li role="presentation"><a href="#tabfeatured_collection" aria-controls="profile" role="tab" data-toggle="tab">{{ settings.items_tab_2 }}</a></li>
+     {% endif %}
+    {% if settings.enable_tabsale and settings.tabsale_collection != blank %}
+      <li role="presentation"><a href="#tabsale_collection" aria-controls="messages" role="tab" data-toggle="tab">{{ settings.items_tab_3 }}</a></li>
+    {% endif %}
+  </ul>
+      
+  <div class="tab-content">
+
+    {% if settings.enable_tabnew and settings.tabnew_collection != blank %}
+    <div class="tab-pane tabs-content fade in active" id="tabnew_collection">
+
+
+
+      {% assign item_in_page = settings.home_mostview_itempage | plus:0 %}
+      {% assign columns_product = settings.home_mostview_columntab | plus:0 %}
+      {% assign product_in_tab = settings.home_mostview_limit | plus:0 %}    
+
+
+      {% assign owl_id = 'owl_tabnew' %}
+      {% assign collection_produclists = collections[settings.tabnew_collection].products %}
+      {% capture row_in_tab %}{{ item_in_page | divided_by: columns_product }}{% endcapture %}
+      {% include 'carousel-product' %}
+
+    </div>
+    {% endif %}
+    
+    {% if settings.enable_tabfeatured and settings.tabfeatured_collection != blank %}
+    <div class="tab-pane tabs-content" id="tabfeatured_collection">
+      {% assign item_in_page = settings.home_mostview_itempage | plus:0 %}
+      {% assign columns_product = settings.home_mostview_columntab | plus:0 %}
+      {% assign product_in_tab = settings.home_mostview_limit | plus:0 %}    
+
+
+      {% assign owl_id = 'owl_tabfeatured' %}
+      {% assign collection_produclists = collections[settings.tabfeatured_collection].products %}
+      {% capture row_in_tab %}{{ item_in_page | divided_by: columns_product }}{% endcapture %}
+      {% include 'carousel-product' %}
+
+    </div>
+    {% endif %}
+    
+    {% if settings.enable_tabsale and settings.tabsale_collection != blank %}
+    <div class="tab-pane tabs-content" id="tabsale_collection">
+      {% assign item_in_page = settings.home_mostview_itempage | plus:0 %}
+      {% assign columns_product = settings.home_mostview_columntab | plus:0 %}
+      {% assign product_in_tab = settings.home_mostview_limit | plus:0 %}    
+
+
+      {% assign owl_id = 'owl_tabsale' %}
+      {% assign collection_produclists = collections[settings.tabsale_collection].products %}
+      {% capture row_in_tab %}{{ item_in_page | divided_by: columns_product }}{% endcapture %}
+      {% include 'carousel-product' %}
+    </div>
+    {% endif %}
+
+
+
+    
+  </div>
+
+<script type="text/javascript" >
+$('.tabs-product .nav-tabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+</div>
+{% endif %}

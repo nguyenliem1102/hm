@@ -1,0 +1,46 @@
+{% if settings.enable_core_feature %}
+<div class="row">
+  <div class="col-md-6 col-sm-6 col-xs-6">
+ 
+    {{ 'core_feature.jpg' | asset_url | img_tag }}
+  </div>
+  <div class="col-md-6 col-sm-6 col-xs-6">
+    <div class="item-block">
+      {% if settings.icon_feature_1 != blank %}
+      	<div class="icon">
+          {{ settings.icon_feature_1 }}
+        </div>
+      {% endif %}
+      {% if settings.core_feature_content_1 != blank %}
+      	<div class="content">
+          {{ settings.core_feature_content_1 }}
+        </div>
+      {% endif %}
+    </div>
+     <div class="item-block">
+      {% if settings.icon_feature_2 != blank %}
+      	<div class="icon">
+          {{ settings.icon_feature_2  }}
+        </div>
+      {% endif %}
+      {% if settings.core_feature_content_2 != blank %}
+      	<div class="content">
+          {{ settings.core_feature_content_2 }}
+        </div>
+      {% endif %}
+    </div>
+     <div class="item-block">
+      {% if settings.icon_feature_3 != blank %}
+      	<div class="icon">
+          {{ settings.icon_feature_3 }}
+        </div>
+      {% endif %}
+      {% if settings.core_feature_content_3 != blank %}
+      	<div class="content">
+          {{ settings.core_feature_content_3 }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endif %}

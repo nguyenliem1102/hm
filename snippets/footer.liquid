@@ -1,0 +1,50 @@
+<footer class="footer-container">
+  <div class="container">
+    
+    <div class="footer-top"> 
+      <div class="row">
+        <div class="logo-footer">
+         <div class="images">
+          	{{ 'logo_footer_top.png' | asset_url | img_tag }}
+          </div>
+          {% if settings.footer_top_content != blank %}
+              <div class="content">
+                   {{ settings.footer_top_content }}
+              </div>
+          {% endif %}
+        </div>
+       <div class="footer-share">
+         <ul>
+           {% if settings.footer_share_1 != blank %}
+          	 <li><a href="{{ settings.footer_link_share_1 }}">{{ settings.footer_share_1 }}</a></li>
+           {% endif %}
+           {% if settings.footer_share_2 != blank %}
+          	 <li><a href="{{ settings.footer_link_share_2 }}">{{ settings.footer_share_2 }}</a></li>
+           {% endif %}
+           {% if settings.footer_share_3 != blank %}
+          	 <li><a href="{{ settings.footer_link_share_3 }}">{{ settings.footer_share_3 }}</a></li>
+           {% endif %}
+           {% if settings.footer_share_4 != blank %}
+          	 <li><a href="{{ settings.footer_link_share_4 }}">{{ settings.footer_share_4 }}</a></li>
+           {% endif %}
+           {% if settings.footer_share_5 != blank %}
+          	 <li><a href="{{ settings.footer_link_share_5 }}">{{ settings.footer_share_5 }}</a></li>
+           {% endif %}
+         </ul>
+        </div>
+        
+      </div>
+    </div>
+    <div class="footer-bottom">
+      {% if settings.display_footer_address %}
+ 
+        {% if settings.footer_address_code %}
+        {{ settings.footer_address_code }}
+        {% endif%}
+
+      {% endif %}
+               
+    </div>
+  </div>
+</footer>
+{% include 'message-modal' %}

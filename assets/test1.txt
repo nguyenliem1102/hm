@@ -1,0 +1,59 @@
+
+http://shopify.github.io/themekit/
+
+theme bootstrap --password=[your-password] --store=[you-store.myshopify.com]
+
+theme bootstrap --password=910b7e7911ec49b0889c1ef446073dd3 --store=hmt-test1.myshopify.com
+
+theme configure --password=910b7e7911ec49b0889c1ef446073dd3 --store=hmt-test1.myshopify.com --themeid=154236297
+154236297
+154236297
+theme upload templates/404.liquid templates/article.liquid
+
+theme upload asset/test1.txt
+
+theme watch --notify=/tmp/theme.update
+F:\Projects\Shopify\HighMountain\Work\Themes\HM
+theme watch --notify=F:\Projects\Shopify\HighMountain\Work\Themes\HM
+liem.
+<style>
+	h2.title  {
+		color:White !important;
+	}
+	.main-slideshow .slide-des a{
+		background:transparent;
+		border: 1px solid white ;
+	}
+	.slide-2 {
+		float:left;
+		width: 500px;
+	}
+</style>
+<div class="slide-1">
+<div class="caption">
+<p> </p>
+  <h2 class="title" >WHERE TASTE <BR> MEETS TRADITION</h2>
+  <div class="text"></div>
+  <a href="#"  >CHECK OUT</a>
+</div>
+</div>
+
+
+<div class="slide-2">
+<div class="caption">
+<p>beard trend 2015</p>
+  <h2 class="title">FALL COLLECTION <br>a TASTE OF TAIWAN</h2>
+  <div class="text"></div>
+<a href="#">DETAILS HERE</a>
+</div>
+</div>
+
+
+<div class="slide-3">
+<div class="caption">
+<p> </p>
+  <h2 class="title">COME VISIT US <BR> AT OUR NEW SHOP</h2>
+  <div class="text"></div>
+<a href="#">VISIT NOW</a>
+</div>
+</div>

@@ -1,0 +1,5 @@
+development:
+  password: 910b7e7911ec49b0889c1ef446073dd3
+  theme_id: "154236297"
+  store: hmt-test1.myshopify.com
+  timeout: 30s

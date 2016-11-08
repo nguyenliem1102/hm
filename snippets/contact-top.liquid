@@ -1,0 +1,40 @@
+{% if settings.enable_block_static %}
+<div class="row">
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    {% if settings.contact_icon_1 != blank %}
+      <div class="icon">
+        {{ settings.contact_icon_1 }}
+      </div>
+    {% endif %}
+    {% if settings.contact_content_1 != blank %}
+      <div class="content">
+        {{ settings.contact_content_1 }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    {% if settings.contact_icon_2 != blank %}
+      <div class="icon">
+        {{ settings.contact_icon_2 }}
+      </div>
+    {% endif %}
+    {% if settings.contact_content_2 != blank %}
+      <div class="content">
+        {{ settings.contact_content_2 }}
+      </div>
+    {% endif %}
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-12">
+    {% if settings.contact_icon_3 != blank %}
+      <div class="icon">
+        {{ settings.contact_icon_3 }}
+      </div>
+    {% endif %}
+    {% if settings.contact_content_3 != blank %}
+      <div class="content">
+        {{ settings.contact_content_3 }}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endif %}	

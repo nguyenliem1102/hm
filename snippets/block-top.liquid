@@ -1,0 +1,89 @@
+
+
+{% if settings.enable_block_carousel %}	
+<div id="carousel-top">
+  <div class="container">
+    <div class="slide-carousel-2 row"> 
+      
+
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <div class="content-slider">
+        
+          {% if settings.block_slide_content_2 != blank %}
+          <div class="custom-content">
+          {{ settings.block_slide_content_2 }}
+          </div>
+          <div id="cntdwn"></div>
+            {% endif %}
+          {% if settings.block_custom_button2 != blank %}
+          <div class="read-more"><a href="{{ settings.block_custom_button_link2 }}">{{ settings.block_custom_button2 }}</a></div>
+          {% endif %}
+        </div>
+      </div>
+      <div class="images col-md-6 col-sm-6 col-xs-12">
+        {{ 'block_slide2.png' | asset_url | img_tag }}
+      </div>
+    </div>
+  </div>
+<script>
+TargetDate = '{{ settings.block_custom_time }}';
+BackColor = "palegreen";
+ForeColor = "navy";
+CountActive = true;
+CountStepper = -1;
+LeadingZero = true;
+
+DisplayFormat = '<div class="day"><span class="no">%%D%%</span><span class="text">days</span></div><div class="hours"><span class="no">%%H%%</span><span class="text">hours</span></div><div class="min"><span class="no">%%M%%</span><span class="text">minutes</span></div><div class="second"><span class="no">%%S%%</span><span class="text">seconds</span></div>';
+FinishMessage = "It is finally here!";
+</script>
+  {{ 'jquery.countdown.js' | asset_url | script_tag }}
+
+ 
+</div>
+
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

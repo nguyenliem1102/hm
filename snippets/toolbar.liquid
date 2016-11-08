@@ -1,0 +1,72 @@
+<div class="toolbar">
+   
+  <div class="toolbar-mode row">
+    <div class="col-md-4 col-sm-4 col-xs-6">
+      <div class="page-total">
+        Showing: {{ paginate.current_offset | plus: 1 }}-{% if paginate.next %}{{ paginate.current_offset | plus: paginate.page_size }}{% else %}{{ paginate.items }}{% endif %} of {{ paginate.items }}
+      </div>
+    </div>
+    <div class="col-md-5 col-sm-5 hidden-xs">
+      <div class="browse-tags">
+        <label>Sort by:</label>
+        <select class="sort-by">
+          <option value="manual">Featured</option>
+          <option value="price-ascending">Price: Low to High</option>
+          <option value="price-descending">Price: High to Low</option>
+          <option value="title-ascending">A-Z</option>
+          <option value="title-descending">Z-A</option>
+          <option value="created-ascending">Oldest to Newest</option>
+          <option value="created-descending">Newest to Oldest</option>
+          <option value="best-selling">Best Selling</option>
+        </select>           
+      </div> 
+    </div> 
+    <div class="col-md-3 col-sm-3 col-xs-6">
+      <div class="collection-view">
+         <label>View</label>
+        <a title="Grid view" class="change-view{% unless template contains 'list' %} active{% endunless %}" data-view="grid">
+          <span class="icon_grid-3x3"></span>
+
+        </a>
+        <a title="List view" class="change-view{% if template contains 'list' %} active{% endif %}" data-view="list">
+          <span class="fa fa-th-list"></span>
+
+        </a>
+      </div>
+    </div>
+   </div>
+</div>
+
+
+<script>
+
+  jQuery('.sort-by')
+    .val('{{ collection.sort_by | default: collection.default_sort_by  }}')
+    .bind('change', function() {
+      Shopify.queryParams.sort_by = jQuery(this).val();
+      location.search = jQuery.param(Shopify.queryParams).replace(/\+/g, '%20');
+    });
+  
+ function replaceUrlParam(url, paramName, paramValue) {
+    var pattern = new RegExp('('+paramName+'=).*?(&|$)'),
+        newUrl = url.replace(pattern,'$1' + paramValue + '$2');
+    if ( newUrl == url ) {
+      newUrl = newUrl + (newUrl.indexOf('?')>0 ? '&' : '?') + paramName + '=' + paramValue;
+    }
+    return newUrl;
+  }
+
+  jQuery(function() {
+    jQuery('.change-view').on('click', function() {
+      var view = jQuery(this).data('view'),
+          url = document.URL,
+          hasParams = url.indexOf('?') > -1;
+
+      if (hasParams) {
+        window.location = replaceUrlParam(url, 'view', view);
+      } else {
+        window.location = url + '?view=' + view;
+      }
+    });
+  });
+</script>

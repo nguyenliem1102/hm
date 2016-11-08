@@ -1,0 +1,62 @@
+{% if settings.display_testimonials %}
+<section class="testimonials">
+  <div class="container">
+    <div class="title">{{ settings.testimonials_title }} </div>
+    <div class="sub-title">{{ settings.testimonials_sub_title }}</div>
+    <div id="testimonials" class="row">
+      <div class="arw-testimonial-box col-md-4 co-sm-4 co-xs-12">
+        <div class="testimonial-avatar">
+          {{ 'testimonials_thumb1.jpg' | asset_url | img_tag }}
+        </div>
+        <div class="testimonial-content">
+          {% if settings.testimonials_text_1 != blank %}
+          	<div class="testimonial-text">{{ settings.testimonials_text_1 }} </div>
+          {% endif %}
+          {% if settings.testimonials_name_1 != blank %}
+          	<div class="testimonial-author">{{ settings.testimonials_name_1 }}</div>
+          {% endif %}
+          {% if settings.testimonials_position_1 != blank %}
+          	<div class="testimonial-author-position">{{ settings.testimonials_position_1 }}</div>
+          {% endif %}
+        </div>
+      </div>
+       <div class="arw-testimonial-box col-md-4 co-sm-4 co-xs-12">
+        <div class="testimonial-avatar">
+          {{ 'testimonials_thumb2.jpg' | asset_url | img_tag }}
+        </div>
+        <div class="testimonial-content">
+          {% if settings.testimonials_text_2 != blank %}
+          	<div class="testimonial-text">{{ settings.testimonials_text_2 }} </div>
+          {% endif %}
+          {% if settings.testimonials_name_2 != blank %}
+          	<div class="testimonial-author">{{ settings.testimonials_name_2 }}</div>
+          {% endif %}
+          {% if settings.testimonials_position_2 != blank %}
+          	<div class="testimonial-author-position">{{ settings.testimonials_position_2 }}</div>
+          {% endif %}
+        </div>
+      </div>
+       <div class="arw-testimonial-box col-md-4 co-sm-4 co-xs-12">
+        <div class="testimonial-avatar">
+          {{ 'testimonials_thumb3.jpg' | asset_url | img_tag }}
+        </div>
+        <div class="testimonial-content">
+          {% if settings.testimonials_text_3 != blank %}
+          	<div class="testimonial-text">{{ settings.testimonials_text_3 }} </div>
+          {% endif %}
+          {% if settings.testimonials_name_3 != blank %}
+          	<div class="testimonial-author">{{ settings.testimonials_name_3 }}</div>
+          {% endif %}
+          {% if settings.testimonials_position_3 != blank %}
+          	<div class="testimonial-author-position">{{ settings.testimonials_position_13 }}</div>
+          {% endif %}
+        </div>
+      </div>
+      
+     
+   
+    </div>
+  </div>
+</section>
+{% endif %}
+

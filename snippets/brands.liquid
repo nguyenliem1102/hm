@@ -1,0 +1,68 @@
+{% if settings.enable_ourbrands %}
+<div class="brand-bottom">
+   {% if settings.brand-footer_title != blank %}
+      <div class="title">
+        <h2>  {{ settings.brand-footer_title }}</h2>
+      </div>
+     {% endif %}
+     {% if settings.brand-footer_sub_title != blank %}
+      <div class="sub-title">
+        <h4>  {{ settings.brand-footer_sub_title }}</h4>
+      </div>
+     {% endif %}
+ 
+  <div id="logo-brand" class="owl-carousel owl-theme">
+    
+    {% for i in (1..5) %}   
+    {% capture modulo %}{{ i | modulo:1 }}{% endcapture %}    
+  	{% if modulo == '0' %}
+    	
+     
+
+      {% capture thumb %}brand_thumb{{ i }}.png{% endcapture %}
+      {% capture thumbs %}brand_thumb{{ i | plus: 1 }}.png{% endcapture %}
+ 
+
+        <div class="item a-center">       
+         
+            <img src="{{ thumb | asset_url }}" alt="" />
+         
+        </div>    
+
+    {% endif %}
+    {% endfor %}
+  </div>
+
+<script>
+  $(document).ready(function() {
+    $("#logo-brand").owlCarousel({
+      itemsCustom : [ 
+        [0, 1],
+        [450, 2],
+        [600, 3],
+        [700, 3],
+        [1000, 4],
+        [1200, 5],
+        [1400, 5],
+        [1600, 5]
+      ],
+      autoPlay : true,
+      stopOnHover : false,
+
+      lazyLoad : false,
+      lazyFollow : true,
+      lazyEffect : "fade",
+      pagination : true,
+
+      // Navigation
+      navigation : false,
+      navigationText : ['<i class="arrow_carrot-left"></i>','<i class="arrow_carrot-right"></i>'],
+      rewindNav : true,
+      scrollPerPage : false,
+
+    });
+  })
+</script>
+
+</div>
+{% endif %}

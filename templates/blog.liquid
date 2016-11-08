@@ -1,0 +1,81 @@
+{% comment %}
+  Loop through a defined number of articles with the 'paginate' tag.
+  Don't forget to close the tag after your loop.
+{% endcomment %}
+
+{% paginate blog.articles by 5 %}
+
+{% comment %}
+  This template is also used for listing out articles of a specific tag.
+  You can change layouts or styles by checking if current_tags is true.
+{% endcomment %}
+
+
+<div class="row">
+  <!-- Begin sidebar -->
+  {% include 'blog_sidebar' %}
+  <!-- End sidebar -->
+
+  <div class="col-xs-12 col-sm-9 col-md-9 col-main">
+    <div class="content-blogs">
+      {% comment %}
+        Loop through each article in your blog. This is limited to what you set for pagination above.
+
+		For more info on article liquid tags:
+		- http://docs.shopify.com/themes/liquid-variables/article
+      {% endcomment %}
+      
+      <ul class="list-blog">
+        {% for article in blog.articles %}
+        <li>
+          <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>
+          
+          <p class="blog_author">
+			{% comment %}
+			  Don't be fooled, the ? in comments_enabled? is part of the liquid tag.
+			{% endcomment %}
+			{% if blog.comments_enabled? %}
+			  <a href="{{ article.url }}#comments">
+				{{ article.comments_count }} {{ article.comments_count | pluralize: 'comment','comments' }}
+			  </a><span class="separator">|</span>
+			{% endif %}
+			<span class="blog_author">Posted 
+			<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+			  {{ article.published_at | date: '%b %d, %Y' }}
+              </time><span> | </span> by {{ article.author }} </span>  
+          </p> 
+			
+		  {% comment %}
+			Add a surrounding div with class 'rte' to anything that will come from the rich text editor.
+			Since this is just a listing page, you can either use the excerpt or truncate the full article.
+		  {% endcomment %}
+		  <div class="des">
+			
+            {{ article.excerpt_or_content | truncatewords: 70}}
+           </div>
+          
+		  {% comment %}
+			Show off meta information like number of comments and tags.
+		  {% endcomment %}
+          
+          <p class="button">
+              <a href="{{ article.url }}">Read more</a>
+          </p>
+          
+		  <ul class="user-tags">
+			{% include 'tags-article' %}
+		  </ul>
+        </li>
+
+		{% endfor %}
+      </ul>
+      
+      {% if paginate.pages > 1 %}
+      <div class="text-center">
+        {% include 'pagination' %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endpaginate %}

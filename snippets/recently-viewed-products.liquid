@@ -1,0 +1,87 @@
+{{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
+{{ 'jquery.products.min.js' | asset_url | script_tag }}
+
+<section class="recently-viewed-products">
+  {% if settings.recently_viewed_products_title != '' %}
+  <h2>{{ settings.recently_viewed_products_title }}</h2>
+  {% endif %}
+  <div class="products-grid" id="recently-viewed-products-grid">
+  </div>
+</section>
+
+{% raw %}
+<script id="recently-viewed-product-grid-template"  type="text/x-jquery-tmpl">
+{% endraw %}
+<div class="{% if settings.prouduct_item_no_hover%}product-item-no-hover{% endif %}  {% if settings.product_image_border%} grid-item-border {% endif %} {% if settings.product_image_crop%} crop_image {% else %} no_crop_image {% endif %} grid-item product-item {% raw %} {{if !available}} sold-out {{/if}} {{if compare_at_price_min > price_min}} on-sale {{/if}}"  id="product-${id}">
+  <div class="product-top">
+	<div class="product-image">
+		<a href="${url}" class="product-grid-image">
+		  <img src="${Shopify.Products.resizeImage(featured_image, "large")}" alt="${featured_image.alt}"/>
+          <div class="hover"></div>
+		</a>
+        
+          {{if compare_at_price_min > price_min}}
+          <div class="product-label">
+               <strong class="label">Sale</strong>
+          </div>
+          {{/if}}
+          {{if !available}} 
+          <div class="product-label">
+             <strong class="sold-out-label">Sold Out</strong>
+           </div>
+          {{/if}}
+       
+	</div>
+  </div>
+  
+  <div class="product-bottom">
+    <a class="product-title" href="${url}">${title}</a>	
+    
+    
+	<div class="price-box">   
+	{{if compare_at_price_min > price_min}} 
+	  <p class="sale">
+	    <span class="old-price"> {{html Shopify.formatMoney(compare_at_price_min, window.money_format)}}</span>
+	    <span class="special-price">{{if price_varies}}<em>from </em>{{/if}}{{html Shopify.formatMoney(price_min, window.money_format)}}</span>
+  	  </p>
+	{{else}}
+	  <p class="regular-product">
+	  	<span >{{if price_varies}}<em>from </em>{{/if}}{{html Shopify.formatMoney(price_min, window.money_format)}}</span>
+	  </p>
+	{{/if}}
+	</div>
+    <span class="shopify-product-reviews-badge" data-id="${id}"></span>
+    
+  </div>
+</div>
+</script>
+{% endraw %}
+
+<script>
+Shopify.Products.showRecentlyViewed({ 
+  howManyToShow: {{ settings.number_of_recently_viewed_products }}, 
+  wrapperId: 'recently-viewed-products-grid', 
+  templateId: 'recently-viewed-product-grid-template',
+  onComplete: function() {
+    if (jQuery("#recently-viewed-products-grid").children().length > 0) {
+  	  jQuery(".recently-viewed-products").show();
+  	  if (window.product_image_resize) {
+          jQuery('#recently-viewed-products-grid img').fakecrop({ 
+            fill: window.images_size.is_crop,
+            widthSelector: ".products-grid .product-image",
+            ratioWrapper: window.images_size
+          });
+  	  }
+  
+  	  if (window.show_multiple_currencies) {
+         Currency.convertAll(window.shop_currency, jQuery('#currencies').val(), 'span.money', 'money_format');
+      }
+  
+ 
+      if (jQuery(".spr-badge").length>0) {
+          return window.SPR.registerCallbacks(), window.SPR.initRatingHandler(), window.SPR.initDomEls(), window.SPR.loadProducts(), window.SPR.loadBadges();
+      }
+    }    
+  }
+});
+</script>

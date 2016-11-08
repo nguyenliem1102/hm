@@ -1,0 +1,44 @@
+{% if settings.display_blog_home %}	
+<div class="main-blog">
+  {% if settings.blog_title != blank %}
+  <div class="block-title">
+    <h2>{{ settings.blog_title }}</h2>
+  </div>
+  {% endif %}
+  {% if settings.blog_sub_title != blank %}
+  <div class="sub-title">
+    {{ settings.blog_sub_title }}
+  </div>
+  {% endif %}
+
+
+  <div class="box-content">
+    <div id="latest-blogs" class="blog">
+
+      {% for article in blogs.news.articles limit:settings.blog_limit %}
+      <div class="item">
+        <div class="blog-item"> 
+          {% if article.content contains '<img' %}
+          <div class="image">
+            {% assign content_blog_home = article.content %}
+            <img src="{% include 'blog-images' %}" title="{{ article.title }}" class="img-responsive replace-2x" alt="{{ article.title }}" />
+          </div>
+          {% endif %}
+          <div class="content-blog">
+          <h3 class="p10">{{ article.title | link_to: article.url }}</h3>
+
+          <div class="date-time"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">
+            {{ article.published_at | date: '%b %d, %Y' }}
+            </time><span> | </span> by {{ article.author }}
+          </div>
+          </div>
+
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+
+</div>
+{% endif %}

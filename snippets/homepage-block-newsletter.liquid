@@ -1,0 +1,16 @@
+{% if settings.footer_display_newsletter %}
+<div class="newsletter">
+
+    {% if settings.footer_newsletter_title != blank %}
+    	<h3 class="module-title"><span>{{ settings.footer_newsletter_title }}</span></h3>
+    {% endif %}
+ 
+
+  <div class="content">
+    {% if settings.footer_newsletter_content != blank %}
+    	<div class="small-title" >{{ settings.footer_newsletter_content }}</div>
+    {% endif %}
+    {% include 'newsletter-form' %}
+  </div>
+</div>
+{% endif %}

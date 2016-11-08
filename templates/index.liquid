@@ -1,0 +1,49 @@
+<div class="banner-slide">
+  {% include 'homepage-flexslider' %}
+</div>
+<div class="block-top">
+  {% include 'home-page-static' %}
+</div>
+<div class="block-carousel">
+  {% include 'block-top' %}
+</div>
+<div class="tabs-product-home">
+  <div class="container">
+    <div class="row">
+      {% comment %} Product Tabs {% endcomment %}
+      {% include 'home-page-tabsproduct' %}
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% comment %}
+
+  This is the homepage of your site.
+  More info on global variables (available on all templates):
+  - http://docs.shopify.com/themes/liquid-variables/global
+  {% endcomment %}
+</div>
+
+
+<div class="home-blog">
+  <div class="container">
+    <div class="row">
+      {% include 'home-blog' %}
+    </div>
+  </div>
+</div>
+<div class="container">
+  {% comment %} Block Brands Slider {% endcomment %}
+  {% include 'brands' %}
+</div>
+<div class="newsneter">
+  <div class="container">
+    <div class="row">
+      {% comment %} newsletter {% endcomment %}
+      {% include 'homepage-block-newsletter' %}
+    </div>
+  </div>
+</div>
+<script>
+  jQuery('.main-content').removeClass('container');
+</script>

@@ -1,0 +1,84 @@
+{% if settings.enable_block_static %}
+<div class="container">
+  {% if settings.block_top_title != blank %}
+  <div class="block-title">
+    <h2>{{ settings.block_top_title }}<span class="text-bg">{{ settings.block_top_title_bg }}</span></h2>
+    
+  </div> 
+  {% endif %}
+  {% if settings.block_top_sub_title != blank %}
+  	<div class="sub-title">{{ settings.block_top_sub_title }}</div>
+  {% endif %}
+  <div class="row">
+	<div class="col-md-3 hidden-sm hidden-xs">
+      <div class="block-top-item">
+		<div class="images">
+          {{ 'block_top_slide8.jpg' | asset_url | img_tag }}
+        </div>
+		<div class="block-content">
+          {% if settings.block_top_icon_1 != blank %}
+          	<i class="{{ settings.block_top_icon_1 }}"></i>
+          {% endif %}
+           {% if settings.block_top_content_1 != blank %}
+              {{ settings.block_top_content_1 }}
+           {% endif %}
+        </div>
+      </div>
+	</div>
+    <div class="col-md-6 col-sm-12 col-xs-12">
+      <div class="block-top-item">
+		<div class="images">
+          {{ 'block_top_slide7.jpg' | asset_url | img_tag }}
+        </div>
+		<div class="block-content">
+          {% if settings.block_top_icon_2 != blank %}
+          	<i class="{{ settings.block_top_icon_2 }}"></i>
+          {% endif %}
+           {% if settings.block_top_content_2 != blank %}
+              {{ settings.block_top_content_2 }}
+           {% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3 hidden-sm hidden-xs">
+       <div class="block-top-item">
+		<div class="images">
+          {{ 'block_top_slide6.jpg' | asset_url | img_tag }}
+        </div>
+		<div class="block-content">
+          {% if settings.block_top_icon_3 != blank %}
+          	<i class="{{ settings.block_top_icon_3 }}"></i>
+          {% endif %}
+           {% if settings.block_top_content_3 != blank %}
+              {{ settings.block_top_content_3 }}
+           {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
